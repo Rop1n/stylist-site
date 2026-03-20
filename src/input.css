@@ -14,9 +14,8 @@
 @layer {
   .tab-trigger.active::after {
     content: "";
-    @apply absolute left-1/2 bottom-0 h-[1px] bg-cream -translate-x-1/2;
+    @apply absolute left-1/2 bottom-0 h-px bg-cream -translate-x-1/2;
     width: 70%;
-    /* Здесь регулируйте ширину линии: меньше или больше */
   }
   .tab-trigger.active {
     @apply relative
@@ -24,4 +23,5 @@
   button{
     @apply cursor-pointer
   }
+  
 }

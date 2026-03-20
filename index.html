@@ -6,7 +6,6 @@
     <title>Александр Громов — Мужской стилист</title>
 
     <link rel="stylesheet" href="/css/output.css" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
@@ -15,7 +14,7 @@
   <body>
     <!-- Хедер -->
     <header class="from-dark-red/40 fixed top-0 left-0 z-10 w-full bg-linear-to-b to-transparent">
-      <div class="mx-auto grid w-full max-w-335 grid-cols-3 items-center px-10 py-4 md:px-8">
+      <div class="mx-auto grid w-full max-w-350 grid-cols-3 items-center px-10 py-4 xl:px-8">
         <div>
           <a href="#">
             <svg width="58" height="59" viewBox="0 0 58 59" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -37,13 +36,13 @@
         </div>
 
         <nav class="justify-self-center">
-          <ul class="text-cream hidden gap-12 font-medium uppercase md:flex">
+          <ul class="text-cream hidden gap-12 font-medium uppercase xl:flex">
             <li><a href="#">услуги</a></li>
             <li><a href="#">lookbook</a></li>
             <li><a href="#">отзывы</a></li>
           </ul>
         </nav>
-        <button class="relative flex h-7 w-7.5 justify-self-end md:hidden">
+        <button class="relative flex h-7 w-7.5 justify-self-end xl:hidden">
           <svg width="29" height="16" viewBox="0 0 29 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <line x1="1" y1="1" x2="28" y2="1" stroke="#EFE9E1" stroke-width="3" stroke-linecap="round" />
             <line x1="1" y1="8" x2="28" y2="8" stroke="#EFE9E1" stroke-width="3" stroke-linecap="round" />
@@ -53,8 +52,8 @@
       </div>
     </header>
     <!-- херо  -->
-    <section class="relative z-1 flex h-full min-h-[90vh] flex-col items-center overflow-hidden bg-[url('/images/hero.png')] bg-cover bg-center bg-top md:min-h-[100vh]">
-      <h1 class="text-cream inset-0 z-10 flex pt-5 text-center text-[20px] font-semibold md:hidden">Александр<br />Громов</h1>
+    <section class=": relative z-1 flex h-full min-h-[100vh] min-h-[1082px] flex-col items-center overflow-hidden bg-[url('/images/hero.png')] bg-cover bg-center bg-top">
+      <h1 class="text-cream inset-0 z-10 flex pt-5 text-center text-[20px] font-semibold xl:hidden">Александр<br />Громов</h1>
 
       <div class="flex max-w-50 justify-center pt-1 md:max-w-[33.177vw] md:pt-20">
         <svg width="637" height="83" viewBox="0 0 637 83" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -66,16 +65,16 @@
       </div>
       <h2 class="text-cream z-0 flex pt-0 text-center text-[15px] font-extrabold md:hidden md:text-left md:text-[30px] md:font-bold">Мужской стилист <br />классической одежды</h2>
       <div class="z-1 mx-auto w-full max-w-[80vw] md:max-w-[clamp(100px,83.33333vw,1600px)]">
-        <h1 class="text-cream z-0 hidden text-[clamp(10px,3.48vw,67px)] leading-16 font-black md:flex">Александр Громов</h1>
+        <h1 class="text-cream z-0 hidden leading-16 font-black xl:flex xl:text-[67px]">Александр Громов</h1>
         <h2 class="text-cream z-0 hidden text-[clamp(10px,1.5625vw,30px)] font-extrabold md:block md:font-bold">Мужской стилист классической одежды</h2>
-        <div class="grid w-full grid-cols-[auto_0.7fr_auto] items-start gap-4">
-          <div class="text-cream pt-1.5 text-[clamp(10px,3.48vw,67px)] font-semibold">
+        <div class="grid w-full grid-cols-[auto_auto_auto] items-start gap-4">
+          <div class="text-cream pt-1.5 text-[25px] font-semibold xl:text-[67px]">
             <p>Ваш</p>
           </div>
-          <div class="text-cream stroke-3 text-center text-[clamp(10px,10.94vw,210px)] leading-[0.7] font-black opacity-70">
+          <div class="text-cream stroke-3 text-center text-[45px] leading-[1] font-black opacity-70 md:leading-[0.7] xl:text-[210px]">
             <p>костюм</p>
           </div>
-          <div class="text-cream hidden justify-self-end pt-[1vh] text-right text-[clamp(10px,3.48vw,67px)] leading-[clamp(10px,3.48vw,67px)] font-semibold md:flex">
+          <div class="text-cream hidden justify-self-end pt-[1vh] text-right leading-[clamp(10px,3.48vw,67px)] font-semibold xl:flex xl:text-[67px]">
             <p class="">
               говорит <br />
               <b>раньше,<br /> </b>чем Вы <br />
@@ -83,7 +82,7 @@
               рот.
             </p>
           </div>
-          <div class="text-cream flex pt-[1vh] text-left text-[clamp(10px,2.791vw,67px)] leading-[clamp(10px,3.48vw,67px)] font-semibold md:hidden">
+          <div class="text-cream flex pt-[1vh] text-left text-[25px] leading-[25px] font-semibold xl:hidden">
             <p class="">
               говорит <br />
               <b>раньше, </b>чем <br />
@@ -93,61 +92,155 @@
           </div>
         </div>
       </div>
-      <div class="z-3 mx-auto grid w-full max-w-[90vw] grid-cols-1 pt-5 md:max-w-[clamp(100px,83.33333vw,1600px)] md:grid-cols-2 md:pt-15.25">
-        <p class="text-cream z-0 pb-10 text-right text-[clamp(10px,2.791vw,67px)] font-bold md:text-left md:text-[clamp(10px,1.5625vw,30px)]">
-          <b>Помогаю деловым людям</b> <br />
+      <div class="z-3 mx-auto grid w-full max-w-[90vw] grid-cols-1 items-center justify-self-center md:grid-cols-2 md:pt-15.25 xl:max-w-[clamp(100px,83.33333vw,1600px)]">
+        <p class="text-cream z-0 hidden pb-10 text-center text-[15px] font-bold md:block md:text-left md:text-[30px]">
+          <b
+            >Помогаю деловым<br />
+            людям</b
+          >
           выглядеть так, чтобы их <br />воспринимали <b>серьёзно</b> — с <br />первого взгляда.
         </p>
-        <button class="text-cream bg-dark-red/60 h-full max-h-50 w-full max-w-70 justify-self-center rounded-xl py-3 pr-0 text-2xl font-black md:max-h-30 md:max-w-100 md:justify-self-end md:rounded-3xl md:py-0 md:text-[clamp(10px,1.71875vw,30px)]">
-          ЗАПИСАТЬСЯ
-          <span class="hidden md:inline"
-            >НА<br />
-            КОНСУЛЬТАЦИЮ</span
+        <div class="flex items-center pt-50 md:pt-0 md:right-0">
+          <button class="text-cream bg-dark-red/60 mx-auto mt-50 h-30 w-80 justify-self-end rounded-3xl border-[1px] border-white py-4 pr-0 text-4xl font-black md:mx-0 md:mt-0 md:min-h-30 md:min-w-100 md:self-end md:justify-self-end md:rounded-3xl md:py-0 md:text-[30px]">
+            ЗАПИСАТЬСЯ
+            <span class="hidden md:inline"
+              >НА<br />
+              КОНСУЛЬТАЦИЮ</span
+            >
+          </button>
+        </div>
+
+        <p class="text-cream z-0 pb-10 text-center text-[15px] font-bold md:hidden">
+          <b
+            >Помогаю деловым<br />
+            людям</b
           >
-        </button>
+          выглядеть так, чтобы их <br />воспринимали <b>серьёзно</b> — с <br />первого взгляда.
+        </p>
       </div>
 
-      <div class="absolute inset-0 z-2 bg-[url('/images/hero-paralax.png')] bg-cover bg-top"></div>
+      <!-- <div class="absolute inset-0 z-2 bg-[url('/images/hero-paralax.png')] bg-cover bg-top"></div> -->
     </section>
-    <section class="bg-blue flex min-h-screen flex-col items-center">
-      <h1 class="text-cream pt-10 text-center text-[35px] font-bold uppercase">lookbook</h1>
+    <!-- lookbook -->
+    <section class="bg-blue flex min-h-screen flex-col items-center justify-center">
+      <h1 class="text-cream pt-5 text-center text-[35px] font-bold uppercase xl:hidden">lookbook</h1>
 
-      <div>
-        <h1 class="text-cream pt-11 text-center text-[35px] font-bold uppercase">примеры моих работ</h1>
-        <div class="mt-4 flex justify-between">
+      <div class="flex flex-col items-center justify-center self-center xl:block xl:w-full xl:max-w-7xl xl:pt-[15vh] xl:pb-[30vh]">
+        <h1 class="text-cream pt-11 text-center text-[35px] font-bold uppercase xl:text-left">примеры моих работ</h1>
+        <div class="mt-4 flex justify-between gap-5 xl:justify-start xl:gap-10">
           <button class="text-cream tab-trigger active text-[29px]">smart casual</button>
           <button class="text-cream tab-trigger text-[29px]">business-casual</button>
         </div>
-        <div class="tab-content grid grid-cols-1 justify-items-center gap-[23px] pt-8 ">
-          <div class="w-[408px] self-center">
-            <img src="/images/lookbook/1.jpg" class="w-full" alt="" />
+        <div class="tab-content xl:grid-row grid max-w-102 grid-cols-1 justify-items-center gap-5.75 py-8 xl:w-max xl:max-w-7xl xl:grid-cols-4">
+          <div class="self-center xl:h-[400px]">
+            <img src="/images/lookbook/1.jpg" class="w-full xl:h-full" alt="" />
           </div>
-          <div class="w-[408px] self-center">
-            <img src="/images/lookbook/2.jpg" class="w-full" alt="" />
+          <div class="self-center xl:h-[400px]">
+            <img src="/images/lookbook/2.jpg" class="w-full xl:h-full" alt="" />
           </div>
-          <div class="w-[408px] self-center">
-            <img src="/images/lookbook/3.jpg" class="w-full" alt="" />
+          <div class="self-center xl:h-[400px]">
+            <img src="/images/lookbook/3.jpg" class="w-full xl:h-full" alt="" />
           </div>
-          <div class="w-[408px] self-center">
-            <img src="/images/lookbook/4.jpg" class="w-full" alt="" />
+          <div class="self-center xl:h-[400px]">
+            <img src="/images/lookbook/4.jpg" class="w-full xl:h-full" alt="" />
           </div>
         </div>
-        <div class="tab-content grid grid-cols-1 justify-items-center gap-[23px] pt-8">
-          <div class="w-[408px] self-center">
-            <img src="/images/lookbook/5.jpg" class="w-full" alt="" />
+        <div class="tab-content xl:grid-row q grid w-102 grid-cols-1 justify-items-center gap-5.75 py-8 xl:w-max xl:max-w-7xl xl:grid-cols-4">
+          <div class="self-center xl:h-[400px]">
+            <img src="/images/lookbook/5.jpg" class="w-full xl:h-full" alt="" />
           </div>
-          <div class="w-[408px] self-center">
-            <img src="/images/lookbook/6.jpg" class="w-full" alt="" />
+          <div class="self-center xl:h-[400px]">
+            <img src="/images/lookbook/6.jpg" class="w-full xl:h-full" alt="" />
           </div>
-          <div class="w-[408px] self-center">
-            <img src="/images/lookbook/7.jpg" class="w-full" alt="" />
+          <div class="self-center xl:h-[400px]">
+            <img src="/images/lookbook/7.jpg" class="w-full xl:h-full" alt="" />
           </div>
-          <div class="w-[408px] self-center">
-            <img src="/images/lookbook/8.jpg" class="w-full" alt="" />
+          <div class="self-center xl:h-[400px]">
+            <img src="/images/lookbook/8.jpg" class="w-full xl:h-full" alt="" />
           </div>
         </div>
       </div>
     </section>
+    <!-- servicer -->
+    <section class="flex h-screen min-h-[1082px] flex-col items-center bg-[url('/images/services-bg.png')] bg-cover bg-top">
+      <h1 class="text-cream pt-5 text-center text-[35px] font-semibold uppercase xl:text-transparent">услуги</h1>
+      <div class="grid grid-cols-2 grid-rows-2 gap-4.5 self-center pt-45">
+        <div class="bg-blue/44 h-[282px] w-[223px] rounded-[21px] border-[0.7px] border-white backdrop-blur-[6px]">
+          <h2 class="text-cream px-3 pt-[36px] text-left text-[20px] font-black uppercase text-shadow-xs">персональная консультация</h2>
+          <p class="text-cream px-3 text-left text-[14px] font-semibold">aнализ внешности, образа жизни и задач. Рекомендации по стилю, цветам и силуэтам</p>
+          <p class="text-cream px-[26px] text-left text-[23px] font-semibold">от 5 000 ₽</p>
+          <div class="flex gap-2 pl-[26px]">
+            <p class="text-dark-red font-[15px] font-semibold">длительность</p>
+            <div class="pt-1.5">
+              <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M10.5826 1.22731C10.5826 1.90518 11.1321 2.4547 11.81 2.4547C12.4878 2.4547 13.0374 1.90518 13.0374 1.22731C13.0374 0.549448 12.4878 -7.09295e-05 11.81 -7.09295e-05C11.1321 -7.09295e-05 10.5826 0.549448 10.5826 1.22731ZM0.194967 11.6149C0.194967 12.2928 0.744485 12.8423 1.42235 12.8423C2.10022 12.8423 2.64973 12.2928 2.64973 11.6149C2.64973 10.9371 2.10022 10.3876 1.42235 10.3876C0.744485 10.3876 0.194967 10.9371 0.194967 11.6149ZM0.000154972 1.22729C0.000154972 1.90516 0.549674 2.45468 1.22754 2.45468C1.9054 2.45468 2.45492 1.90516 2.45492 1.22729C2.45492 0.549429 1.9054 -8.91685e-05 1.22754 -8.91685e-05C0.549674 -8.91685e-05 0.000154972 0.549429 0.000154972 1.22729ZM10.3878 11.6149C10.3878 12.2928 10.9373 12.8423 11.6152 12.8423C12.293 12.8423 12.8426 12.2928 12.8426 11.6149C12.8426 10.9371 12.293 10.3875 11.6152 10.3875C10.9373 10.3875 10.3878 10.9371 10.3878 11.6149ZM11.81 1.22731L11.6473 1.06458L1.25962 11.4522L1.42235 11.6149L1.58508 11.7777L11.9727 1.39004L11.81 1.22731ZM1.22754 1.22729L1.06481 1.39002L11.4524 11.7777L11.6152 11.6149L11.7779 11.4522L1.39027 1.06457L1.22754 1.22729Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <p class="text-dark-red font-[15px] font-semibold">1 час</p>
+          </div>
+        </div>
+        <div class="bg-blue/44 h-[282px] w-[223px] rounded-[21px] border-[0.7px] border-white backdrop-blur-[6px]">
+          <h2 class="text-cream px-3 pt-[36px] text-left text-[20px] font-black uppercase text-shadow-xs">персональная консультация</h2>
+          <p class="text-cream px-3 text-left text-[14px] font-semibold">aнализ внешности, образа жизни и задач. Рекомендации по стилю, цветам и силуэтам</p>
+          <p class="text-cream px-[26px] text-left text-[23px] font-semibold">от 5 000 ₽</p>
+          <div class="flex gap-2 pl-[26px]">
+            <p class="text-dark-red font-[15px] font-semibold">длительность</p>
+            <div class="pt-1.5">
+              <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M10.5826 1.22731C10.5826 1.90518 11.1321 2.4547 11.81 2.4547C12.4878 2.4547 13.0374 1.90518 13.0374 1.22731C13.0374 0.549448 12.4878 -7.09295e-05 11.81 -7.09295e-05C11.1321 -7.09295e-05 10.5826 0.549448 10.5826 1.22731ZM0.194967 11.6149C0.194967 12.2928 0.744485 12.8423 1.42235 12.8423C2.10022 12.8423 2.64973 12.2928 2.64973 11.6149C2.64973 10.9371 2.10022 10.3876 1.42235 10.3876C0.744485 10.3876 0.194967 10.9371 0.194967 11.6149ZM0.000154972 1.22729C0.000154972 1.90516 0.549674 2.45468 1.22754 2.45468C1.9054 2.45468 2.45492 1.90516 2.45492 1.22729C2.45492 0.549429 1.9054 -8.91685e-05 1.22754 -8.91685e-05C0.549674 -8.91685e-05 0.000154972 0.549429 0.000154972 1.22729ZM10.3878 11.6149C10.3878 12.2928 10.9373 12.8423 11.6152 12.8423C12.293 12.8423 12.8426 12.2928 12.8426 11.6149C12.8426 10.9371 12.293 10.3875 11.6152 10.3875C10.9373 10.3875 10.3878 10.9371 10.3878 11.6149ZM11.81 1.22731L11.6473 1.06458L1.25962 11.4522L1.42235 11.6149L1.58508 11.7777L11.9727 1.39004L11.81 1.22731ZM1.22754 1.22729L1.06481 1.39002L11.4524 11.7777L11.6152 11.6149L11.7779 11.4522L1.39027 1.06457L1.22754 1.22729Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <p class="text-dark-red font-[15px] font-semibold">1 час</p>
+          </div>
+        </div>
+        <div class="bg-blue/44 h-[282px] w-[223px] rounded-[21px] border-[0.7px] border-white backdrop-blur-[6px]">
+          <h2 class="text-cream px-3 pt-[36px] text-left text-[20px] font-black uppercase text-shadow-xs">персональная консультация</h2>
+          <p class="text-cream px-3 text-left text-[14px] font-semibold">aнализ внешности, образа жизни и задач. Рекомендации по стилю, цветам и силуэтам</p>
+          <p class="text-cream px-[26px] text-left text-[23px] font-semibold">от 5 000 ₽</p>
+          <div class="flex gap-2 pl-[26px]">
+            <p class="text-dark-red font-[15px] font-semibold">длительность</p>
+            <div class="pt-1.5">
+              <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M10.5826 1.22731C10.5826 1.90518 11.1321 2.4547 11.81 2.4547C12.4878 2.4547 13.0374 1.90518 13.0374 1.22731C13.0374 0.549448 12.4878 -7.09295e-05 11.81 -7.09295e-05C11.1321 -7.09295e-05 10.5826 0.549448 10.5826 1.22731ZM0.194967 11.6149C0.194967 12.2928 0.744485 12.8423 1.42235 12.8423C2.10022 12.8423 2.64973 12.2928 2.64973 11.6149C2.64973 10.9371 2.10022 10.3876 1.42235 10.3876C0.744485 10.3876 0.194967 10.9371 0.194967 11.6149ZM0.000154972 1.22729C0.000154972 1.90516 0.549674 2.45468 1.22754 2.45468C1.9054 2.45468 2.45492 1.90516 2.45492 1.22729C2.45492 0.549429 1.9054 -8.91685e-05 1.22754 -8.91685e-05C0.549674 -8.91685e-05 0.000154972 0.549429 0.000154972 1.22729ZM10.3878 11.6149C10.3878 12.2928 10.9373 12.8423 11.6152 12.8423C12.293 12.8423 12.8426 12.2928 12.8426 11.6149C12.8426 10.9371 12.293 10.3875 11.6152 10.3875C10.9373 10.3875 10.3878 10.9371 10.3878 11.6149ZM11.81 1.22731L11.6473 1.06458L1.25962 11.4522L1.42235 11.6149L1.58508 11.7777L11.9727 1.39004L11.81 1.22731ZM1.22754 1.22729L1.06481 1.39002L11.4524 11.7777L11.6152 11.6149L11.7779 11.4522L1.39027 1.06457L1.22754 1.22729Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <p class="text-dark-red font-[15px] font-semibold">1 час</p>
+          </div>
+        </div>
+        <div class="bg-blue/44 h-[282px] w-[223px] rounded-[21px] border-[0.7px] border-white backdrop-blur-[6px]">
+          <h2 class="text-cream px-3 pt-[36px] text-left text-[20px] font-black uppercase text-shadow-xs">персональная консультация</h2>
+          <p class="text-cream px-3 text-left text-[14px] font-semibold">aнализ внешности, образа жизни и задач. Рекомендации по стилю, цветам и силуэтам</p>
+          <p class="text-cream px-[26px] text-left text-[23px] font-semibold">от 5 000 ₽</p>
+          <div class="flex gap-2 pl-[26px]">
+            <p class="text-dark-red font-[15px] font-semibold">длительность</p>
+            <div class="pt-1.5">
+              <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M10.5826 1.22731C10.5826 1.90518 11.1321 2.4547 11.81 2.4547C12.4878 2.4547 13.0374 1.90518 13.0374 1.22731C13.0374 0.549448 12.4878 -7.09295e-05 11.81 -7.09295e-05C11.1321 -7.09295e-05 10.5826 0.549448 10.5826 1.22731ZM0.194967 11.6149C0.194967 12.2928 0.744485 12.8423 1.42235 12.8423C2.10022 12.8423 2.64973 12.2928 2.64973 11.6149C2.64973 10.9371 2.10022 10.3876 1.42235 10.3876C0.744485 10.3876 0.194967 10.9371 0.194967 11.6149ZM0.000154972 1.22729C0.000154972 1.90516 0.549674 2.45468 1.22754 2.45468C1.9054 2.45468 2.45492 1.90516 2.45492 1.22729C2.45492 0.549429 1.9054 -8.91685e-05 1.22754 -8.91685e-05C0.549674 -8.91685e-05 0.000154972 0.549429 0.000154972 1.22729ZM10.3878 11.6149C10.3878 12.2928 10.9373 12.8423 11.6152 12.8423C12.293 12.8423 12.8426 12.2928 12.8426 11.6149C12.8426 10.9371 12.293 10.3875 11.6152 10.3875C10.9373 10.3875 10.3878 10.9371 10.3878 11.6149ZM11.81 1.22731L11.6473 1.06458L1.25962 11.4522L1.42235 11.6149L1.58508 11.7777L11.9727 1.39004L11.81 1.22731ZM1.22754 1.22729L1.06481 1.39002L11.4524 11.7777L11.6152 11.6149L11.7779 11.4522L1.39027 1.06457L1.22754 1.22729Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <p class="text-dark-red font-[15px] font-semibold">1 час</p>
+          </div>
+        </div>
+      </div>
+      <h2 class="text-cream w-full max-w-[464px] self-center pt-9 text-left text-[18px] font-black">
+        Не знаете, с чего начать? <br />
+        Начните с персональной консультации.
+      </h2>
+      <button class="text-cream bg-cream/22 mt-7.5 h-full max-h-25 w-full max-w-[473px] justify-self-center rounded-[21px] border-[0.7px] border-white text-[30px] font-black backdrop-blur-[6px]">ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ</button>
+    </section>
+
     <script src="js/main.js" defer></script>
   </body>
 </html>
