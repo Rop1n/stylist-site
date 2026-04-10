@@ -18,9 +18,8 @@
 
 ## Запуск
 
-\`\`\`bash
-npm install
+```bash
 npm run dev
-\`\`\`
+```
 
 Открыть `index.html` через Live Server.
