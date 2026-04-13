@@ -48,8 +48,21 @@ function toggleMenu() {
       body.classList.remove('overflow-hidden')
     }
   })
+  const links = document.querySelectorAll("#mobile-link")
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      burger.classList.remove('active')
+      menu.classList.add('hidden')
+      menu.classList.remove('flex')
+      body.classList.remove('overflow-hidden')
+    })
+  })
 }
 toggleMenu()
+
+
+
+mobileLinkClick()
 
 toggleTabs('.tab-trigger', '.tab-content')
 
