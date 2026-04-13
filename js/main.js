@@ -1,31 +1,55 @@
+
+
 function toggleTabs(tabsTriggerClass, tabsContentClass) {
-    const tabsTriggers = document.querySelectorAll(tabsTriggerClass)
-    const tabsContents = document.querySelectorAll(tabsContentClass)
+  const tabsTriggers = document.querySelectorAll(tabsTriggerClass)
+  const tabsContents = document.querySelectorAll(tabsContentClass)
 
-    tabsContents.forEach(content => {
+  tabsContents.forEach(content => {
+    content.classList.add('hidden')
+  });
+
+  tabsContents[0].classList.remove('hidden')
+
+
+  tabsTriggers.forEach((trigger, idx) => {
+    trigger.addEventListener('click', () => {
+      tabsTriggers.forEach(t => t.classList.remove('active'))
+
+      trigger.classList.add('active')
+
+      tabsContents.forEach(content => {
         content.classList.add('hidden')
-    });
+      });
+      tabsContents[idx].classList.remove('hidden')
+    })
 
-    tabsContents[0].classList.remove('hidden')
-
-
-    tabsTriggers.forEach((trigger, idx) => {
-        trigger.addEventListener('click', () => {
-            tabsTriggers.forEach(t => t.classList.remove('active'))
-
-            trigger.classList.add('active')
-
-            tabsContents.forEach(content => {
-                content.classList.add('hidden')
-            });
-            tabsContents[idx].classList.remove('hidden')
-        })
-
-    });
+  });
 
 
 
 }
+
+function toggleMenu() {
+  const burger = document.querySelector("#burger")
+  const menu = document.querySelector('#mobile-menu')
+  const body = document.querySelector('body')
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('active')
+    menu.classList.toggle('hidden')
+    menu.classList.toggle('flex')
+    body.classList.toggle('overflow-hidden')
+  })
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 1023) {
+
+      burger.classList.remove('active')
+      menu.classList.add('hidden')
+      menu.classList.remove('flex')
+      body.classList.remove('overflow-hidden')
+    }
+  })
+}
+toggleMenu()
 
 toggleTabs('.tab-trigger', '.tab-content')
 
@@ -33,7 +57,7 @@ toggleTabs('.tab-trigger', '.tab-content')
 
 const modal = document.getElementById('modal');
 const openBtns = document.querySelectorAll('button[data-modal]');
-const closeBtn = document.getElementById('modal-close');
+const closeBtns = document.querySelectorAll('[data-modal-close]');
 
 openBtns.forEach(btn => {
   btn.addEventListener('click', () => {
@@ -42,10 +66,21 @@ openBtns.forEach(btn => {
   });
 });
 
-closeBtn.addEventListener('click', () => {
-  modal.classList.add('hidden');
-  modal.classList.remove('flex');
+closeBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  });
 });
+
+const modalContent = document.getElementById('modal-content');
+
+// Останавливаем клики внутри формы, чтобы они не доходили до родительского #modal
+modalContent.addEventListener('click', (e) => {
+  e.stopPropagation();
+});
+
+
 
 const form = document.querySelector('form');
 
