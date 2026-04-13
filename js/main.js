@@ -1,5 +1,3 @@
-
-
 function toggleTabs(tabsTriggerClass, tabsContentClass) {
   const tabsTriggers = document.querySelectorAll(tabsTriggerClass)
   const tabsContents = document.querySelectorAll(tabsContentClass)
@@ -61,9 +59,6 @@ function toggleMenu() {
 toggleMenu()
 
 
-
-mobileLinkClick()
-
 toggleTabs('.tab-trigger', '.tab-content')
 
 // modal
@@ -99,13 +94,69 @@ const form = document.querySelector('form');
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
-  const data = new FormData(form);
-  await fetch(form.action, {
-    method: 'POST',
-    body: data,
-    headers: { 'Accept': 'application/json' }
-  });
-  modal.classList.add('hidden');
-  modal.classList.remove('flex');
-  form.reset();
+
+  clearErrors();
+
+  const name = form.querySelector('input[name="name"]').value.trim();
+
+  let hasError = false;
+
+  // Имя
+  if (!name) {
+    showError('name-error', 'Введите имя');
+    hasError = true;
+  }
+
+  // Телефон
+  if (!mask.masked.isComplete) {
+    showError('phone-error', 'Введите корректный номер телефона');
+    hasError = true;
+  }
+
+  if (hasError) return;
+
+  try {
+    const data = new FormData(form);
+
+    const res = await fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (res.ok) {
+      form.reset();
+      mask.value = '';
+      clearErrors();
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    } else {
+      showError('phone-error', 'Ошибка отправки формы');
+    }
+  } catch {
+    showError('phone-error', 'Ошибка сети');
+  }
 });
+
+
+const phoneInput = document.querySelector('input[name="phone-number"]');
+
+const mask = IMask(phoneInput, {
+  mask: '+{7} (000) 000-00-00'
+});
+
+function showError(id, message) {
+  const el = document.getElementById(id);
+  el.textContent = message;
+  el.classList.remove('hidden');
+}
+
+function clearErrors() {
+  document.querySelectorAll('[id$="-error"]').forEach(el => {
+    el.textContent = '';
+    el.classList.add('hidden');
+  });
+}
+
+console.log(document.getElementById('name-error'));
+console.log(document.getElementById('phone-error'));
