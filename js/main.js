@@ -91,29 +91,34 @@ modalContent.addEventListener('click', (e) => {
 
 
 const form = document.querySelector('form');
+const submitBtn = document.getElementById('submit-btn');
+const successMessage = document.getElementById('form-success');
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
 
   clearErrors();
+  successMessage.classList.add('hidden');
 
   const name = form.querySelector('input[name="name"]').value.trim();
 
   let hasError = false;
 
-  // Имя
   if (!name) {
     showError('name-error', 'Введите имя');
     hasError = true;
   }
 
-  // Телефон
   if (!mask.masked.isComplete) {
     showError('phone-error', 'Введите корректный номер телефона');
     hasError = true;
   }
 
   if (hasError) return;
+
+  // 🔒 Блокируем кнопку
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Отправка...';
 
   try {
     const data = new FormData(form);
@@ -128,13 +133,26 @@ form.addEventListener('submit', async (e) => {
       form.reset();
       mask.value = '';
       clearErrors();
-      modal.classList.add('hidden');
-      modal.classList.remove('flex');
+
+      // ✅ Показываем сообщение
+      successMessage.classList.remove('hidden');
+
+      // (опционально) закрыть модалку через время
+      setTimeout(() => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }, 500);
+
     } else {
       showError('phone-error', 'Ошибка отправки формы');
     }
+
   } catch {
     showError('phone-error', 'Ошибка сети');
+  } finally {
+    // 🔓 Разблокируем кнопку
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Оставить заявку';
   }
 });
 

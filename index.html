@@ -493,16 +493,17 @@
         <button data-modal-close class="text-cream absolute top-4 right-4 text-2xl">✕</button>
         <form class="flex flex-col" action="https://formspree.io/f/mreowajo" method="POST">
           <label class="text-cream pt-5">Имя</label>
-          <input type="text" name="name" placeholder="Александр" class="bg-cream w-full rounded-lg p-2"  />
-          <p class="text-red-400 text-sm mt-1 hidden" id="name-error"></p>
+          <input type="text" name="name" placeholder="Александр" class="bg-cream w-full rounded-lg p-2" />
+          <p class="mt-1 hidden text-sm text-red-400" id="name-error"></p>
           <label class="text-cream pt-5">Телефон</label>
           <input type="text" name="phone-number" type="number" inputmode="numeric" placeholder="+7 (912) 345-67-89" class="bg-cream w-full rounded-lg p-2" />
-          <p class="text-red-400 text-sm mt-1 hidden" id="phone-error"></p>
+          <p class="mt-1 hidden text-sm text-red-400" id="phone-error"></p>
           <label class="text-cream pt-5">Комментарий</label>
           <textarea placeholder="Хочу выглядеть круто!" name="message" class="bg-cream max-h-[150px] w-full rounded-lg p-2" name="" id=""></textarea>
           <p class="text-cream/70 mt-2">Я свяжусь с вами в ближайшее время</p>
-          <button type="submit" class="bg-cream text-dark-red mt-10 h-15 w-85 self-center rounded-xl text-[25px] font-black uppercase">Оставить заявку</button>
+          <button id="submit-btn" type="submit" class="bg-cream text-dark-red mt-10 h-15 w-85 self-center rounded-xl text-[25px] font-black uppercase">Оставить заявку</button>
           <input type="hidden" name="_next" value="http://127.0.0.1:5500" />
+          <p id="form-success" class="mt-4 hidden text-green-400">Заявка успешно отправлена!</p>
         </form>
       </div>
     </div>
